@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transformer Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="calculator">
+  <h2>Transformer Calculator</h2>
+  
+  <div class="row">
+    <div class="column">
+      <label>Primary Coil Turns:</label>
+      <input type="number" id="primaryCoil" placeholder="Optional">
+      
+      <label>Input Voltage (V, optional):</label>
+      <input type="number" id="inputVoltage" placeholder="Optional">
+      
+      <label>Input Amp (A, optional):</label>
+      <input type="number" id="inputAmp" placeholder="Optional">
+    </div>
+    
+    <div class="column">
+      <label>Secondary Coil Turns:</label>
+      <input type="number" id="secondaryCoil" readonly>
+      
+      <label>Output Voltage (V, required):</label>
+      <input type="number" id="outputVoltage" placeholder="Required">
+      
+      <label>Output Amp (A, optional):</label>
+      <input type="number" id="outputAmp" readonly>
+    </div>
+  </div>
+  
+  <div class="row">
+    <label><input type="checkbox" id="safeMode" checked> Safe Calculation (on by default)</label>
+  </div>
+  
+  <button onclick="calculate()">Calculate</button>
+  <button onclick="clearFields()">Clear</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
